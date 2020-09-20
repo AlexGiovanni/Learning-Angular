@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+      <div class="col"></div>
+  
+          <div class="col-6 ">
+              <div style=" padding-top:40px;">
+                  <div class="card " style="width: 50rem;">
+                      <div class="card-header">
+                          <!-- Search form -->
+                          <form action="/search" method="post">
+                              <input type="text" class="form-control web-search-box" placeholder="Search by name" name="keyword" value=''>
+                              <!--<input type="submit" value="send">-->
+                          </form>
+                      </div>
+                      <div class="card-body">
+                          
+                          <div class="overflow-auto scrollable" >
+                            <div *ngFor="let student of students; let i = index">
+                               
+                            <div class="student" id="{{'student'+i}}">
+                          
+                              <table class="table ">
+                                  <tbody>
+                                  <tr>
+                                      <td>
+                                          
+                                          <img src="{{student.pic}}" style="width:80px;height:80px;">
+                                      </td>
+                                      <td>
+                                          <h1>{{student.firstName}} {{student.lastName}} </h1>
+                                          <ul>
+                                              <li>Email: {{student.email}}</li>
+                                              <li>Company: {{student.company}}</li>
+                                              <li>Skill: {{student.skill}} </li>
+                                              <li id="{{'grades'+i}}" >
+                                                <input [value]="currentItem.name" >without NgModel
+                                                  Grades: {{student.grades}}
+                                                </li>
+                                              <li id="average">Average: {{average}}%</li>
+  
+                                              
+                                          </ul>
+  
+                                      </td>
+                                      <td>
+                                          <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">+</a>
+  
+                                      </td>
+                                  
+                                  </tr>
+                                  
+                                  
+                                  </tbody>
+                              </table>
+                             
+                              </div><!--end student div-->
+                              
+                            </div><!--end ngFor div-->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      <div class="col"></div>
+    </div>
+  </div>
+  
+  

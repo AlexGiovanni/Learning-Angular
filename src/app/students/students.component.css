@@ -1,0 +1,25 @@
+/* .container {
+    
+    overflow:hidden; 
+    max-height:800px !important;
+ } */
+ .scrollable{
+    height: 670px;
+    overflow: scroll;
+}
+h1{
+   color: black;
+   text-align: left;
+}
+ul {
+   list-style-type: none;
+  }
+
+li{
+   color: 	#808080;
+   text-align: left;
+}
+.active-cyan input.form-control[type=text] {
+   border-bottom: 1px solid #4dd0e1;
+   box-shadow: 0 1px 0 0 #4dd0e1;
+}
