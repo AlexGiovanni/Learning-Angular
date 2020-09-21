@@ -33,8 +33,8 @@
                                               <li>Company: {{student.company}}</li>
                                               <li>Skill: {{student.skill}} </li>
                                               <li id="{{'grades'+i}}" >
-                                                <input [value]="currentItem.name" >without NgModel
-                                                  Grades: {{student.grades}}
+                                                  <app-grades (childEvent)="average=$event"[grades]="student.grades"></app-grades>
+                                                  
                                                 </li>
                                               <li id="average">Average: {{average}}%</li>
   
